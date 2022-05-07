@@ -1,16 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,i,count=0;
+    int a,b,c,i;
     scanf("%d %d",&a,&b);
-    for(i=1;i<=a*b;i++)
+    if(a>b)
+    {
+        c=a;
+    }
+    else
+    {
+        c=b;
+    }
+    for(i=1;i<=c;i++)
     {
         if(i%a==0 && i%b==0)
         {
             printf("%d",i);
             break;
         }
-        count++;
+        ++c;
     }
-    return 0;
 }
