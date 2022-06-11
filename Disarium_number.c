@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,m,c=1,sum=0,r,rev=0,r1;
+    scanf("%d",&n);
+    m=n;
+    while(n>0)
+    {
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+    while(rev>0)
+    {
+        r1=rev%10;
+        sum=sum+pow(r1,c);
+        rev=rev/10;
+        c++;
+    }
+    if(sum==m)
+    {
+        printf("True");
+    }
+    else
+    {
+        printf("False");
+    }
+}
